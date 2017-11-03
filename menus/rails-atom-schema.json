@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle rails-atom-schema",
+        "command": "rails-atom-schema:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "rails-atom-schema",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "rails-atom-schema:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

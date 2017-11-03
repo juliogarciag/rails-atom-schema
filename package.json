@@ -1,0 +1,25 @@
+{
+  "name": "rails-atom-schema",
+  "main": "./lib/rails-atom-schema",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "rails-atom-schema:toggle"
+  },
+  "repository": "https://github.com/atom/rails-atom-schema",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "child-process-promise": "^2.2.1",
+    "prettier": "^1.7.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6"
+  }
+}
