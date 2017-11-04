@@ -14,12 +14,18 @@
   },
   "dependencies": {
     "child-process-promise": "^2.2.1",
-    "prettier": "^1.7.4",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.10.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.4.0",
+    "prettier": "^1.7.4",
     "redux-logger": "^3.0.6"
   }
 }

@@ -8,9 +8,10 @@ def get_class_node(tree, module_names = [])
   if tree.type == :class
     [tree, module_names]
   elsif tree.type == :module
-    nested_tree = tree.children.last
-    module_name = tree.children.first.children.last
-    get_class_node(nested_tree, module_names + [module_name])
+    module_tree = tree.children.first
+    nested_class_tree = tree.children.last
+    module_name = module_tree.children.last
+    get_class_node(nested_class_tree, module_names + [module_name])
   end
 end
 
