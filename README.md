@@ -8,14 +8,14 @@ This is a package to show the schema state of each Rails model in Atom. The idea
 - [x] REFACTOR: Sort out the code that makes the main dispatches when an editor changes so it lives on its own file.
 - [x] UI/UX: Show columns in a pretty and scalable way. (disclaimer: I'm not a designer)
 - [x] UX: Allow the user to copy the name of a column to the clipboard.
-- [ ] UX: Show extended column attributes (limit, precision, scale, allows null and default) in a tooltip or as a new row under each column row.
-- [ ] UX: Show columns with indexes in a special way.
-- [ ] UX/REFACTOR: Remove ruby's parser and ruby executable dependencies.
-- [ ] UX/REFACTOR: Remove all unneeded dependencies.
-- [ ] UX: Test with Rails 4.x and Rails 5.x applications.
-- [ ] BUG: Loading/Schema State mess up when changing tabs faster than the ruby script runs.
-- [ ] BUG: Model name recognition fails at `Namespace::Model` class names.
+- [x] UX/REFACTOR: Remove ruby's parser and ruby executable dependencies.
+- [x] BUG: Model name recognition fails at `Namespace::Model` class names.
 - [ ] UX: Explictly sort the columns. (id first, timestamps last)
+- [ ] UX: Test with Rails 4.x and Rails 5.x applications.
+- [ ] REFACTOR: Use async action creators instead of the handleEditorChange function.
+- [ ] BUG: Loading/Schema State mess up when changing tabs faster than the ruby script runs.
 
 ## 1.1 ROADMAP
+- [ ] UI: Show columns with indexes.
+- [ ] UI: Show extended column attributes (limit, precision, scale, allows null and default).
 - [ ] UI: Show associations with links to other files.
