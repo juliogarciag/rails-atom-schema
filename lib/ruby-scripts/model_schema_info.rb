@@ -1,7 +1,17 @@
 model_name = ARGV.first
 model_class = Kernel.const_get(model_name)
 
-columns = model_class.columns.map do |column|
+TIMESTAMPS = ["updated_at", "created_at"]
+
+def sort_columns(columns)
+  first_column = columns.find { |column| column.name === "id" }
+  last_columns = columns.find_all { |column| column.name.in?(TIMESTAMPS) }
+  normal_columns = columns.reject { |column| column.name.in?(TIMESTAMPS + ["id"]) }
+
+  ([first_column] + normal_columns + last_columns).compact
+end
+
+columns = sort_columns(model_class.columns).map do |column|
   {
     name: column.name,
     type: column.type,

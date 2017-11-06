@@ -10,10 +10,11 @@ This is a package to show the schema state of each Rails model in Atom. The idea
 - [x] UX: Allow the user to copy the name of a column to the clipboard.
 - [x] UX/REFACTOR: Remove ruby's parser and ruby executable dependencies.
 - [x] BUG: Model name recognition fails at `Namespace::Model` class names.
-- [ ] UX: Explictly sort the columns. (id first, timestamps last)
+- [x] UX: Explictly sort the columns. (id first, timestamps last)
 - [ ] UX: Test with Rails 4.x and Rails 5.x applications.
 - [ ] REFACTOR: Use async action creators instead of the handleEditorChange function.
 - [ ] BUG: Loading/Schema State mess up when changing tabs faster than the ruby script runs.
+- [ ] UX: Make model name recognition in JS to avoid an extra potentially slow ruby call.
 
 ## 1.1 ROADMAP
 - [ ] UI: Show columns with indexes.
