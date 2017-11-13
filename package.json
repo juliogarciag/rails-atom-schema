@@ -2,7 +2,7 @@
   "name": "rails-atom-schema",
   "main": "./lib/rails-atom-schema",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Schema information for Rails projects",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": "rails-atom-schema:toggle"
@@ -10,7 +10,7 @@
   "deserializers": {
     "rails-atom-schema/RailsAtomSchemaView": "deserializeSchema"
   },
-  "repository": "https://github.com/atom/rails-atom-schema",
+  "repository": "https://github.com/juliogarciag/rails-atom-schema",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "rails-atom-schema:toggle"
+    "ctrl-alt-s": "rails-atom-schema:toggle"
   }
 }
