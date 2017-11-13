@@ -1,7 +1,7 @@
 {
   "name": "rails-atom-schema",
   "main": "./lib/rails-atom-schema",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Schema information for Rails projects",
   "keywords": [],
   "activationCommands": {
