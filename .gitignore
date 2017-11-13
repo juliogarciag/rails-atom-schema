@@ -1,3 +1,5 @@
 .DS_Store
 npm-debug.log
 node_modules
+rails-projects/project-1/log/*
+rails-projects/project-1/tmp/*
