@@ -8,7 +8,7 @@ class ApplicationSchema
   end
 
   def as_json
-    { modelSchemas: model_schemas }
+    { modelSchemas: model_schemas, version: ActiveRecord::Migrator.current_version }
   end
 
   private

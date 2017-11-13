@@ -21,10 +21,10 @@ This is a package to show the schema state of each Rails model in Atom. The idea
   - [x] Fix issue when abandoning a project for another one when the first one takes a lot of time to load.
   - [x] Serialize the state of the models per project so it's loaded from a local storage instead of loading the data again if the user reo pens the project.
   - [x] Watch for changes in the schema to reflect on the view.
-- [ ] Add a button to Reload the schema.
-- [ ] Add option to add a mapping between a ruby file and a model. (that will be serialized)
+- [x] Add a button to Reload the schema.
 
 ## 1.1 ROADMAP
+- [ ] Add option to add a mapping between a ruby file and a model. (that will be serialized)
 - [ ] Ensure deserialization works with styles.
 - [ ] Ensure it works with multiple rails projects open side by side.
 
