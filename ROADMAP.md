@@ -1,6 +1,6 @@
 ## 1.1 ROADMAP
 
-* [ ] Add option to select Rails binary location.
+* [x] Add option to select Rails binary location.
 
 ## 1.2 ROADMAP
 
