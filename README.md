@@ -1,3 +1,6 @@
+## IMPORTANT
+I no longer maintain this package, as I no longer use Atom as my editor. If you want to fork it, feel free to do it. If someone wants to take care of the package in the Atom repository, please make an issue about it, so we can get in contact and coordinate.
+
 # Rails Atom Schema
 
 This is a package to show the schema state of each Rails model in Atom, but its architected in a way that it would allow to show more amazing things such as a DER of the entire app and maps of the relationships between models in the future.
