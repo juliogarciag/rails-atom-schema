@@ -35,16 +35,19 @@ class ApplicationSchema
   end
 
   def serialize_model_columns(model_class)
+    begin
     sort_columns(model_class.columns).map do |column|
       {
         name: column.name,
         type: column.type,
         default: column.default,
         allowsNull: column.null,
-        limit: column.sql_type_metadata.limit,
-        precision: column.sql_type_metadata.precision,
-        scale: column.sql_type_metadata.scale
+        limit: column.limit,
+        precision: column.precision,
+        scale: column.scale
       }
+    end
+    rescue
     end
   end
 
