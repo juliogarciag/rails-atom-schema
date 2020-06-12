@@ -90,8 +90,7 @@ class ApplicationSchema
     first_column = columns.find { |column| column.name === "id" }
     last_columns = columns.find_all { |column| column.name.in?(TIMESTAMPS) }
     normal_columns = columns.reject { |column| column.name.in?(TIMESTAMPS + ["id"]) }
-
-    ([first_column] + normal_columns + last_columns).compact
+    ([first_column] + normal_columns.sort_by(&:name) + last_columns).compact
   end
 end
 
