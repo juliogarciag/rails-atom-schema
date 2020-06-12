@@ -35,16 +35,19 @@ class ApplicationSchema
   end
 
   def serialize_model_columns(model_class)
+    begin
     sort_columns(model_class.columns).map do |column|
       {
         name: column.name,
         type: column.type,
         default: column.default,
         allowsNull: column.null,
-        limit: column.sql_type_metadata.limit,
-        precision: column.sql_type_metadata.precision,
-        scale: column.sql_type_metadata.scale
+        limit: column.limit,
+        precision: column.precision,
+        scale: column.scale
       }
+    end
+    rescue
     end
   end
 
@@ -68,7 +71,7 @@ class ApplicationSchema
       source_location = model_class.method(method_name).source_location
       next if source_location.nil?
       file_path, _line_number = source_location
-      return file_path if file_path.starts_with?(Rails.root.to_s)
+      return file_path if file_path.starts_with?(Rails.root.to_s) and !file_path.include?("concerns")
     end
     return nil
   end
@@ -78,7 +81,7 @@ class ApplicationSchema
       source_location = model_class.instance_method(method_name).source_location
       next if source_location.nil?
       file_path, _line_number = source_location
-      return file_path if file_path.starts_with?(Rails.root.to_s)
+      return file_path if file_path.starts_with?(Rails.root.to_s) and !file_path.include?("concerns")
     end
     return nil
   end
@@ -87,8 +90,7 @@ class ApplicationSchema
     first_column = columns.find { |column| column.name === "id" }
     last_columns = columns.find_all { |column| column.name.in?(TIMESTAMPS) }
     normal_columns = columns.reject { |column| column.name.in?(TIMESTAMPS + ["id"]) }
-
-    ([first_column] + normal_columns + last_columns).compact
+    ([first_column] + normal_columns.sort_by(&:name) + last_columns).compact
   end
 end
 
