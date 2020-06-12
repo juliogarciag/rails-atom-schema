@@ -71,7 +71,7 @@ class ApplicationSchema
       source_location = model_class.method(method_name).source_location
       next if source_location.nil?
       file_path, _line_number = source_location
-      return file_path if file_path.starts_with?(Rails.root.to_s)
+      return file_path if file_path.starts_with?(Rails.root.to_s) and !file_path.include?("concerns")
     end
     return nil
   end
@@ -81,7 +81,7 @@ class ApplicationSchema
       source_location = model_class.instance_method(method_name).source_location
       next if source_location.nil?
       file_path, _line_number = source_location
-      return file_path if file_path.starts_with?(Rails.root.to_s)
+      return file_path if file_path.starts_with?(Rails.root.to_s) and !file_path.include?("concerns")
     end
     return nil
   end
